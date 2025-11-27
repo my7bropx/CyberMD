@@ -1,0 +1,17 @@
+[package]
+name = "cybermd-highlighter"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+cybermd-ast = { path = "../cybermd-ast" }
+tree-sitter = { workspace = true }
+tree-sitter-python = { workspace = true }
+tree-sitter-cpp = { workspace = true }
+tree-sitter-javascript = { workspace = true }
+tree-sitter-bash = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+parking_lot = { workspace = true }

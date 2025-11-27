@@ -1,0 +1,16 @@
+[package]
+name = "cybermd-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+cybermd-ast = { path = "../cybermd-ast" }
+cybermd-parser = { path = "../cybermd-parser" }
+cybermd-highlighter = { path = "../cybermd-highlighter" }
+serde = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+parking_lot = { workspace = true }
+once_cell = { workspace = true }

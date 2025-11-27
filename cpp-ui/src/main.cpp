@@ -1,0 +1,40 @@
+#include <QApplication>
+#include <QStyle>
+#include <QStyleFactory>
+#include "mainwindow.h"
+
+int main(int argc, char *argv[]) {
+    QApplication app(argc, argv);
+
+    // Set application metadata
+    app.setApplicationName("CyberMD");
+    app.setApplicationVersion("0.1.0");
+    app.setOrganizationName("CyberMD");
+
+    // Use Fusion style for modern look
+    app.setStyle(QStyleFactory::create("Fusion"));
+
+    // Set dark palette
+    QPalette darkPalette;
+    darkPalette.setColor(QPalette::Window, QColor(53, 53, 53));
+    darkPalette.setColor(QPalette::WindowText, Qt::white);
+    darkPalette.setColor(QPalette::Base, QColor(25, 25, 25));
+    darkPalette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
+    darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
+    darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+    darkPalette.setColor(QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Button, QColor(53, 53, 53));
+    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::BrightText, Qt::red);
+    darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
+    darkPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+    darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+
+    app.setPalette(darkPalette);
+
+    MainWindow window;
+    window.resize(1200, 800);
+    window.show();
+
+    return app.exec();
+}

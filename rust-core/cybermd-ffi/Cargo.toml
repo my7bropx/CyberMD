@@ -1,0 +1,17 @@
+[package]
+name = "cybermd-ffi"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+cybermd-core = { path = "../cybermd-core" }
+cybermd-ast = { path = "../cybermd-ast" }
+cybermd-parser = { path = "../cybermd-parser" }
+cybermd-highlighter = { path = "../cybermd-highlighter" }
+libc = { workspace = true }
+serde_json = { workspace = true }
